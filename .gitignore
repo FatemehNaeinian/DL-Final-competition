@@ -1,0 +1,46 @@
+.venv/
+**/__pycache__/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Archives / large downloads
+*.zip
+data/
+data/adapters/
+data/runs/
+data/results/
+data/logs/
+data/.hf_home/
+# Training artifacts (regenerable; keeps clone/push small)
+data/
+outputs/
+log/
+
+# Common generated files
+submission.csv
+data/submission_*.csv
+data/val_*.csv
+data/train_*.csv
+data/*scores*.csv
+data/*eval*.csv
+
+# Local scratch notebooks
+starter_notebook (1).ipynb
+
+# Keep docs + configs tracked (do NOT ignore *.md / *.txt / *.json globally)
+
+*.csv
+*.txt
+*.json
+*.yaml
+*.yml
+*.jsonl
+*.jsonl.gz
+*.jsonl.bz2
+*.jsonl.xz
+*.jsonl.tar
+*.jsonl.tar.gz
+*.jsonl.tar.bz2
+*.jsonl.tar.xz
+*.pdf
