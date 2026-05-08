@@ -1,0 +1,19 @@
+## Core ML stack
+# NOTE: Install an appropriate CUDA-enabled PyTorch build separately if needed.
+torch
+
+transformers==4.57.6
+peft==0.18.1
+accelerate
+bitsandbytes
+
+## Data / utilities
+datasets
+numpy
+pandas
+tqdm
+pillow
+
+## Common HF runtime deps (often pulled transitively, but useful to be explicit)
+huggingface-hub
+safetensors

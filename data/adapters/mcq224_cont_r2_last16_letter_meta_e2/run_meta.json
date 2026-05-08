@@ -1,0 +1,77 @@
+{
+  "run_name": "mcq224_cont_r2_last16_letter_meta_e2",
+  "model_id": "HuggingFaceTB/SmolVLM-500M-Instruct",
+  "seed": 42,
+  "ft_img_size": 224,
+  "train_n": 3109,
+  "val_n": 1048,
+  "num_train_epochs": 2.0,
+  "trainable_params": 440320,
+  "checkpoint_dir": "/scratch/fn2174/DL-Final/data/runs/mcq224_cont_r2_last16_letter_meta_e2/checkpoints",
+  "cfg_name": "attn_mlp_lora_r2_last16",
+  "full_finetune": false,
+  "text_only": false,
+  "text_only_fields": [],
+  "vision_only": false,
+  "multimodal_prompt": {
+    "answer_prefix": "Answer:",
+    "ft_metadata_fields": [
+      "grade",
+      "subject",
+      "topic"
+    ],
+    "train_captions_csv": null,
+    "infer_captions_csv": null,
+    "image_augment": false,
+    "submission_img_size": 384,
+    "mcq_contrastive": true,
+    "mcq_completion_mode": "letter",
+    "mcq_choice_max_chars": 160,
+    "mcq_shuffle_choice_order": false,
+    "mcq_shuffle_choice_seed": null
+  },
+  "lora": {
+    "r": 2,
+    "lora_alpha": 16,
+    "use_dora": false,
+    "target_modules": [
+      "v_proj",
+      "up_proj",
+      "q_proj",
+      "gate_proj",
+      "down_proj"
+    ],
+    "layers_to_transform": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+    ],
+    "layers_pattern": "layers"
+  },
+  "train": {
+    "global_step": 390,
+    "train_loss": 0.8851266225179036
+  },
+  "val_eval_after_train": {
+    "run_name": "mcq224_cont_r2_last16_letter_meta_e2",
+    "status": "ok",
+    "adapter_dir": "data/adapters/mcq224_cont_r2_last16_letter_meta_e2",
+    "val_n": 1048,
+    "val_acc": 0.6202290076335878,
+    "val_csv": "/scratch/fn2174/DL-Final/data/val_eval_mcq224_cont_r2_last16_letter_meta_e2_n1048_seed42.csv",
+    "captions_csv": null
+  }
+}

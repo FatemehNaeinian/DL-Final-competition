@@ -1,0 +1,47 @@
+
+Competition Rules
+Objective
+Participants must build a multimodal model that selects the correct multiple-choice answer from image and text inputs.
+
+Team Size
+Each team may have at most 2 members.
+
+Allowed Data
+Only the provided competition data may be used (train, validation, test, and provided images/files).
+
+External Data and Model Policy
+Use of any external datasets, labels, synthetic data generated from external corpora, or pretrained resources derived from outside the provided competition package is not allowed. Use of any external models is restricted, use only HuggingFaceTB/SmolVLM-500M-Instruct
+
+Internet and Evaluation Environment
+Evaluation is conducted in an offline environment with no internet access. Submissions must run without network connectivity.
+
+Compute Limits
+Development and training must stay within free-tier resources only:
+
+Google Colab Free tier, and student tier
+Kaggle Free tier
+Trainable Parameter Limit
+The maximum number of trainable parameters is 5 million.
+This includes all fine-tuned/adapted parameters (for example, adapters, LoRA weights, classification heads, and any other updated weights).
+
+Submission Format
+Final submission must be a CSV file named submission.csv with exactly two columns:
+
+id
+answer
+Prediction Format
+Answer values must be 0-indexed integers corresponding to the selected option index.
+
+Evaluation Metric
+The primary ranking metric is accuracy on hidden test labels.
+
+Leaderboard Policy
+Public leaderboard reflects only the public portion of the hidden test set.
+Final ranking is determined by the private hidden test split.
+
+Fair Play
+Any attempt to infer hidden labels through leakage, prohibited external resources, or rule circumvention may result in disqualification.
+
+Reproducibility Requirement
+Teams should be able to provide code and steps that reproduce their submitted predictions under the stated compute and offline constraints.
+

@@ -6,14 +6,24 @@ __pycache__/
 
 # Archives / large downloads
 *.zip
-data/
-data/adapters/
+*.pdf
+
+# --- Data / artifacts (keep repo small) ---
+# Ignore everything under data/ by default (datasets, caches, outputs)
+data/**
+
+# Unignore the specific adapter we want to publish (small ~MBs)
+!data/
+!data/adapters/
+!data/adapters/mcq224_cont_r2_last16_letter_meta_e2/
+!data/adapters/mcq224_cont_r2_last16_letter_meta_e2/**
+
+# Keep the rest of data/ ignored
+data/images/
 data/runs/
 data/results/
 data/logs/
 data/.hf_home/
-# Training artifacts (regenerable; keeps clone/push small)
-data/
 outputs/
 log/
 
@@ -29,18 +39,3 @@ data/*eval*.csv
 starter_notebook (1).ipynb
 
 # Keep docs + configs tracked (do NOT ignore *.md / *.txt / *.json globally)
-
-*.csv
-*.txt
-*.json
-*.yaml
-*.yml
-*.jsonl
-*.jsonl.gz
-*.jsonl.bz2
-*.jsonl.xz
-*.jsonl.tar
-*.jsonl.tar.gz
-*.jsonl.tar.bz2
-*.jsonl.tar.xz
-*.pdf
